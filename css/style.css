@@ -84,6 +84,7 @@ body {
 .nav-menu:hover,
 .nav-menu:focus {
   color: #2196f3;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-contacts {
@@ -124,6 +125,7 @@ body {
 .menu-contacts a:focus {
   color: #2196f3;
   --color1: #2196f3;
+  transition: 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* footer */
@@ -166,8 +168,7 @@ body {
   --color4: rgba(255, 255, 255, 0.1);
 }
 
-.box-footer-social svg:hover,
-.box-footer-social:focus {
+.box-footer-social svg:hover {
   --color4: rgba(33, 150, 243, 1);
   cursor: pointer;
 }
@@ -214,6 +215,7 @@ body {
 .address .footer-contacts:hover,
 .address .footer-contacts:focus {
   color: #2196f3;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* styles css for file index.html */
@@ -259,6 +261,13 @@ body {
   cursor: pointer;
   margin: 0px auto;
   border: none;
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-50%, -50%) scale(0) rotate(0deg) skew(40deg, 40deg);
 }
 
 .information {
@@ -323,6 +332,25 @@ body {
   gap: 30px;
 }
 
+.description li {
+  position: relative;
+}
+
+.description p {
+  margin: 27px auto;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+}
+
+.description div {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 .bg-color {
   background-color: #f5f4fa;
 }
@@ -358,7 +386,6 @@ body {
 }
 
 .team figcaption {
-  /* margin: 0px auto 0px; */
   padding: 30px 0px 18px;
   background-color: white;
 }
@@ -427,6 +454,7 @@ body {
 .customer-box svg {
   width: 106px;
   height: 60px;
+  transition: var(--color2) 10s;
 }
 
 .customer-box div:hover,
@@ -488,7 +516,28 @@ body {
 .box-portfolio-fotos figure {
   margin: 0px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
+
+.box-portfolio-fotos div {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  transform: translateY(100%);
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 49px 45px 49px 24px;
+  z-index: -2;
+}
+
+.text-under-portfolio-fotos {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 0px;
+}
+
 figure > img {
   vertical-align: middle;
 }
@@ -503,11 +552,17 @@ figure > img {
   border: solid 1px;
   border-top: none;
   border-color: rgba(238, 238, 238, 1);
+  background-color: var(--background-color);
 }
 .box-portfolio-fotos figure:hover,
 .box-portfolio-fotos figure:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.box-portfolio-fotos figure:hover div {
+  transform: translateY(0%);
+  z-index: 0;
 }
 
 figcaption p {
