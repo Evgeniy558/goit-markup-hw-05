@@ -38,7 +38,9 @@
                 >
               </li>
               <li class="nav-menu-item">
-                <a href="" class="nav-menu">Agencja</a>
+                <a href="index.html" class="nav-menu">
+                  <p class="is-active">Agencja</p></a
+                >
               </li>
               <li class="nav-menu-item">
                 <a href="portfolio.html" class="nav-menu">Portfolio</a>
@@ -73,12 +75,9 @@
       <section>
         <div class="container-main main-section">
           <h1>EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-          <button data-modal-open type="button">Zamów usługe</button>
-          <div class="modal is-hidden" data-modal>
-            <div class="form">
-              <button data-modal-close>X</button>
-            </div>
-          </div>
+          <button class="btn-add" data-modal-open type="button">
+            Zamów usługe
+          </button>
         </div>
       </section>
       <section>
@@ -162,7 +161,7 @@
         <div class="container team">
           <h2>Nasz zespół</h2>
           <div class="team-fotos">
-            <figure >
+            <figure>
               <img
                 src="images/productdesigner.jpg"
                 width="270"
@@ -172,12 +171,12 @@
               <figcaption>
                 <span>John Doe</span>
                 <p>Product Designer</p>
-                <div class="social-links" >
+                <div class="social-links">
                   <svg>
-                    <use href="images/icons.svg#icon-instagram" ></use>
+                    <use href="images/icons.svg#icon-instagram"></use>
                   </svg>
                   <svg>
-                    <use href="images/icons.svg#icon-twitter" ></use>
+                    <use href="images/icons.svg#icon-twitter"></use>
                   </svg>
                   <svg>
                     <use href="images/icons.svg#icon-facebook"></use>
@@ -360,6 +359,11 @@
         </div>
       </div>
     </footer>
+    <div class="modal is-hidden" data-modal>
+      <div class="form">
+        <button class="btn-modal" data-modal-close>&times;</button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
