@@ -423,6 +423,10 @@ body {
   font-weight: 700;
 }
 
+.description img {
+  display: block;
+}
+
 .description div {
   position: absolute;
   width: 100%;
@@ -493,6 +497,7 @@ body {
 .social-links svg {
   width: 44px;
   height: 44px;
+  transition: 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes social-links-index {
@@ -505,7 +510,7 @@ body {
 .social-links svg:hover,
 .social-links svg:focus {
   animation-name: social-links-index;
-  animation-duration: 250ms;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
@@ -542,10 +547,15 @@ body {
 .customer-box svg {
   width: 106px;
   height: 60px;
-  transition: var(--color2) 10s;
 }
 
 @keyframes customer-animation {
+  0% {
+    --color2: #afb1b8;
+    --color1: #afb1b8;
+    border: 1px solid #afb1b8;
+  }
+
   100% {
     --color2: #2196f3;
     --color1: #2196f3;
@@ -557,7 +567,7 @@ body {
 .customer-box div:focus {
   animation-name: customer-animation;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-duration: 250ms;
+  animation-duration: 10s;
   animation-fill-mode: forwards;
   cursor: pointer;
 }
