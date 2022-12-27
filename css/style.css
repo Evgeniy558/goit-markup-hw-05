@@ -349,6 +349,9 @@ body {
   display: flex;
   padding-top: 94px;
   padding-bottom: 94px;
+}
+.information {
+  display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 30px;
@@ -356,20 +359,29 @@ body {
 
 .information-flexbox {
   display: flex;
+
   flex-direction: column;
+  align-items: center;
   width: calc((100% - 90px) / 4);
 }
-.information-flexbox div {
+.image {
   background-color: #f5f4fa;
   border-radius: 4px;
-  padding: 25px 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 25px;
   margin-bottom: 30px;
 }
 
 .information-flexbox svg {
-  width: 70px;
-  height: 70px;
   margin: 0 auto;
+}
+
+.title {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 
 .information h3 {
@@ -382,7 +394,9 @@ body {
 
 .information p {
   color: #757575;
+  letter-spacing: 0.03em;
   line-height: 24px;
+  font-size: 14px;
   margin: 0px;
 }
 
@@ -450,12 +464,11 @@ body {
   display: flex;
   gap: 30px;
 }
-
-.team-fotos > figure {
+.team-member {
   font-size: 16px;
   color: #757575;
   text-align: center;
-  margin: 0px auto;
+  margin: 0px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -500,10 +513,10 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-links svg {
+/* .social-links svg {
   width: 20px;
   height: 20px;
-}
+} */
 
 .social-links a:hover,
 .social-links a:focus {
@@ -533,7 +546,7 @@ body {
   padding-bottom: 94px;
 }
 
-.customer-box > div {
+.customer-box > li {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   padding: 16px 31px 13px;
@@ -542,13 +555,8 @@ body {
   fill: #afb1b8;
 }
 
-.customer-box svg {
-  width: 106px;
-  height: 60px;
-}
-
-.customer-box div:hover,
-.customer-box div:focus {
+.customer-box li:hover,
+.customer-box li:focus {
   cursor: pointer;
   fill: #2196f3;
   border: 1px solid #2196f3;
